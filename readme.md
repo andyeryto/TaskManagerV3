@@ -99,7 +99,7 @@ The configuration includes:
 ### **Database configuration**
 - Run the database container:
   ```sh
-  docker run --name taskmanager-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=taskmanagerdb -p 5432:5432 -d postgres
+  docker run --name taskmanager-postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=password -e POSTGRES_DB=taskmanagerdb -p 5432:5432 -d postgres
   ```
   
 - Run the database:
@@ -165,6 +165,8 @@ The configuration includes:
 ![API_task_get_all](images/API_task_get_all.png)
   - Update a task.
   - Delete a task.
+  - Inside the TaskItem Table in DB.
+![DataBase](images/DataBase.png)
 ---
 
 ### **AI - case study **
