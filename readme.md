@@ -74,7 +74,20 @@ A task management system that allows users to create, update, delete, and view t
   dotnet run --project src/TaskManager.API
   ```
 
+- To see documentation of the API, open the following URL in your browser:
+  ```
+  http://localhost:5266/swagger/index.html
+
+![Alt text](images/suwaggerDoc.png)
+
 ---
+- In the Swagger UI, you can test the API endpoints, such as:
+  - Register a new user.
+  - Log in to get an access token. Set the token in the "Authorize" button.
+  - Create a new task.
+  - Get a list of tasks.
+  - Update a task.
+  - Delete a task.
 
 ### **Project Configuration**
 In the file `appsettings.json`, you can configure the database connection string and JWT authentication settings.

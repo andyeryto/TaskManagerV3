@@ -132,7 +132,18 @@ if (app.Environment.IsDevelopment())
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Task Manager API v1");
     });
+
+    // Redirect root URL ("/") to Swagger
+    app.Use(async (context, next) =>
+    {
+        if (context.Request.Path == "/")
+        {
+            context.Response.Redirect("/swagger/index.html");
+            return;
+        }
+        await next();
+    });
 }
 
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 app.Run();
