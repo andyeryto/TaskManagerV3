@@ -67,29 +67,6 @@ A task management system that allows users to create, update, delete, and view t
 
 ---
 
-### **Run the project**
-
-- To start the project, execute:
-  ```sh
-  dotnet run --project src/TaskManager.API
-  ```
-
-- To see documentation of the API, open the following URL in your browser:
-  ```
-  http://localhost:5266/swagger/index.html
-  https://localhost:7048/swagger/index.html
-
-![Alt text](images/suwaggerDoc.png)
-
----
-- In the Swagger UI, you can test the API endpoints, such as:
-  - Register a new user.
-  - Log in to get an access token. Set the token in the "Authorize" button.
-  - Create a new task.
-  - Get a list of tasks.
-  - Update a task.
-  - Delete a task.
-
 ### **Project Configuration**
 In the file `appsettings.json`, you can configure the database connection string and JWT authentication settings.
 ```json
@@ -117,16 +94,22 @@ The configuration includes:
 - **Docker Network**: Services connected to the same network.
 - **Volumes**: Database data persistence.
 
-- Run the database:
-  ```sh
-  docker-compose up -d
-  ```
+---
 
+### **Database configuration**
 - Run the database container:
   ```sh
   docker run --name taskmanager-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=taskmanagerdb -p 5432:5432 -d postgres
   ```
   
+- Run the database:
+  ```sh
+  docker-compose up -d
+  ```
+- IMPORTANT: After the container is built, create the database:
+  ```sh
+  CREATE DATABASE taskmanagerdb;
+  ```
 - To confirm the container is running, execute:
   ```sh
   docker ps
@@ -138,6 +121,49 @@ The configuration includes:
   docker rm taskmanager-postgres
   ```
   
+---
+
+### **Run the project**
+
+- To start the project, execute:
+  ```sh
+  dotnet run --project src/TaskManager.API
+  ```
+
+- To see documentation of the API, open the following URL in your browser:
+  ```
+  http://localhost:5266/swagger/index.html
+  https://localhost:7048/swagger/index.html
+
+![Alt text](images/suwaggerDoc.png)
+
+---
+
+### **Testing API Methods**
+
+- In the Swagger UI, you can test the API endpoints, such as:
+  - Register a new user.
+  - Log in to get an access token. Set the token in the "Authorize" button.
+  - Create a new task.
+  - Get a list of tasks.
+  - Update a task.
+  - Delete a task.
+
+- Next images display each API endpoint Swagger UI test:
+  - Register a new user.
+![API_user_register](images/API_user_register.png)
+  - Log in to get an access token. 
+![API_user_login](images/API_user_login.png)
+  - Set the token in the "Authorize" button.
+![API_user_Token](images/API_user_Token.png)
+  - Create a new task.
+![API_task_register](images/API_task_register.png)
+  - Get one task.
+![API_task_getById](images/API_task_getById.png)
+  - Get a list of tasks.
+![API_task_get_all](images/API_task_get_all.png)
+  - Update a task.
+  - Delete a task.
 ---
 
 ### **AI - case study **
