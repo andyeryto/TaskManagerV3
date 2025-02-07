@@ -77,6 +77,7 @@ A task management system that allows users to create, update, delete, and view t
 - To see documentation of the API, open the following URL in your browser:
   ```
   http://localhost:5266/swagger/index.html
+  https://localhost:7048/swagger/index.html
 
 ![Alt text](images/suwaggerDoc.png)
 
