@@ -3,10 +3,6 @@
 
 #### **Title:** Task Management System
 
-#### **Actors:**
-- **User**: Can create, read, update, and delete tasks.
-- **Admin**: Can manage users and oversee tasks.
-
 #### **Description:**
 A task management system that allows users to create, update, delete, and view tasks. Users must register and log in to manage their tasks. The system will prioritize tasks based on due dates and allow AI-based insights to help users organize their work efficiently.
 
