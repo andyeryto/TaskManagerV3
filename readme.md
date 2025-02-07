@@ -127,6 +127,7 @@ The configuration includes:
 
 - To start the project, execute:
   ```sh
+  dotnet build
   dotnet run --project src/TaskManager.API
   ```
 
